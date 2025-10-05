@@ -122,8 +122,33 @@ const Classify = () => {
         <CardHeader>
           <CardTitle>Upload Dataset</CardTitle>
           <CardDescription>
-            CSV file with columns: period, duration, depth, snr, stellar_radius, etc.
+            CSV file with required and optional columns
           </CardDescription>
+          <div className="mt-4 space-y-3 text-sm">
+            <div>
+              <p className="font-semibold text-foreground mb-2">Required fields:</p>
+              <div className="flex flex-wrap gap-1.5">
+                {['koi_fpflag_nt', 'koi_fpflag_ss', 'koi_fpflag_co', 'koi_fpflag_ec',
+                  'koi_period', 'koi_duration', 'koi_depth', 'koi_impact',
+                  'koi_model_snr', 'koi_num_transits', 'koi_steff', 'koi_slogg',
+                  'koi_smet', 'koi_srad', 'koi_ror', 'koi_prad'].map((field) => (
+                  <Badge key={field} variant="secondary" className="text-xs font-mono">
+                    {field}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground mb-2">Optional fields (for control):</p>
+              <div className="flex flex-wrap gap-1.5">
+                {['kepid', 'kepoi_name'].map((field) => (
+                  <Badge key={field} variant="outline" className="text-xs font-mono">
+                    {field}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </div>
         </CardHeader>
         <CardContent>
           <div
