@@ -148,6 +148,19 @@ const Classify = () => {
                 ))}
               </div>
             </div>
+            <div className="pt-2 border-t border-border/50">
+              <p className="text-muted-foreground">
+                You can download NASA mission data (KOI or TESS) and test it:{' '}
+                <a
+                  href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-medium"
+                >
+                  NASA Exoplanet Archive
+                </a>
+              </p>
+            </div>
           </div>
         </CardHeader>
         <CardContent>
