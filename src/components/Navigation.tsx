@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { to: "/", label: "Classify", icon: Upload },
   { to: "/metrics", label: "Metrics", icon: BarChart3 },
-  { to: "/scan", label: "Scan", icon: Search },
-  { to: "/tuning", label: "Tuning", icon: Settings },
+  //{ to: "/scan", label: "Scan", icon: Search },
+  // { to: "/tuning", label: "Tuning", icon: Settings },
 ];
 
 const Navigation = () => {
